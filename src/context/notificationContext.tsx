@@ -31,8 +31,7 @@ const NotificationContext = createContext<NotificationContextType | undefined>(
 
 // WebSocket base URL
 const WS_BASE_URL =
-  process.env.NEXT_PUBLIC_WS_NOTIFICATION_URL ||
-  'ws://127.0.0.1:8000/ws/notifications/';
+`${process.env.WEBSOCKET_URL_PREFIX}/ws/notifications/`;
 
 // Reconnection settings
 const RECONNECT_INTERVAL = 5000; // 5 seconds

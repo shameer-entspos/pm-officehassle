@@ -25,7 +25,7 @@ const Chat = () => {
     if (chat.chatId) {
       getMessages(chat.chatId);
       const socket = new WebSocket(
-        `ws://127.0.0.1:8000/ws/chat/${chat.chatId}/`
+        `${process.env.WEBSOCKET_URL_PREFIX}/ws/chat/${chat.chatId}/`
       );
 
       // Set WebSocket instance on open
